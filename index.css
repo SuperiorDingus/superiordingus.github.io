@@ -1,0 +1,165 @@
+body {
+    background-color: rgb(10,10,15);
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4vmin;
+    text-shadow:  white 0 0 0.1em, black 0.08em 0.08em 0.4em;
+    text-align: center;
+    margin: 0;
+    overflow:hidden
+}
+
+div.top {
+    background-color: rgb(14,14,19);
+}
+
+.toptext {
+    margin: 0;
+    padding: 1vmin;
+}
+
+#messageBoard{
+  opacity: 1;
+  font-size: 2.5vmin;
+  transition: opacity 1.2s; 
+  margin-top: 0;
+}
+
+#messageBoard.fade {
+  opacity: 0;
+}
+
+.counter {
+    margin: 0;
+}
+div.left {
+    float: left;
+    width: 40%;
+    margin: 0;
+}
+div.right {
+    float: left;
+    width: 60%;
+}
+footer {
+    font-size: 2vmin;
+    text-shadow: white 0 0 0.05em, black 0.08em 0.08em 0.04em;
+}
+.count {
+    font-size: 8vmin;
+}
+
+.kps {
+    font-size: 2vmin;
+    margin: 0;
+}
+.game {
+    width: 80%;
+    display: inline-block;
+    background-color: rgb(15,15,20);
+    text-align: center;
+}
+.koziar {
+    width: 30vmin;
+    height: 40.0573065903vmin;
+    filter: brightness(100%);
+    transition: width .5s ease-out;
+}
+
+.koziar:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+.koziar.expand {
+    width: 64.2vmin;
+    height: 40.0573065903vmin;
+    filter: brightness(140%);
+}
+
+.kozybutton {
+    border-style: none;
+    background: none;  
+    highlight: none;
+}
+
+::selection{
+    color: none;
+    background: none;
+}
+div.shop {
+    text-align: left;
+    margin: 0 5vmin;
+    visibility: hidden;
+}
+
+p.title {
+    display: inline;
+    margin-left: 2vmin;
+}
+
+p.heading {
+    display: inline;
+    font-size: 3vmin;
+    text-align: center;
+    margin-bottom: 2vmin;
+}
+
+p.description {
+    font-size: 3vmin;    
+}   
+button.buy {
+    cursor: pointer;
+    color: white;
+    border-style: none;
+    background-color: rgb(10,10,15);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4vmin;
+    text-shadow:  white 0 0 0.1em, black 0.08em 0.08em 0.4em;
+    box-shadow: black 0.08em 0.08em 0.4em;
+    padding: .5vmin 5vmin;
+}
+
+button.buyu {
+    cursor: pointer;
+    color: white;
+    border-style: none;
+    background-color: rgb(15,15,20);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2.8vmin;
+    text-shadow:  white 0 0 0.1em, black 0.08em 0.08em 0.4em;
+    box-shadow: black 0.08em 0.08em 0.4em;
+    padding: .1vmin 1vmin;
+}
+
+.titleu {
+    display: inline;
+    margin-left: 1vmin;
+    font-size: 2.8vmin;
+}
+
+#item0 {
+    background-color: rgb(10,10,15);
+    padding: .8vmin;
+    margin: 1vmin;
+}
+.descriptionu {
+    font-size: 2vmin;   
+    margin: 1vmin;
+}   
+
+button.buy:hover {
+    background: rgb(5,5,10);
+    box-shadow: none;
+}
+
+button.buyu:hover {
+    background: rgb(5,5,10);
+    box-shadow: none;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+

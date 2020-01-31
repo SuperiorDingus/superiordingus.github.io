@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KoziarKlicker</title>
+    <link rel="icon" type="image/png" href="assets/img/koziarFace.png">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="scripts/game.js" type="application/javascript" charset="utf-8"></script>
+</head>
+<body onload="begin()">
+    <script>
+        var koziars = 0;
+        var unlocks = 0;
+        var gen = 0;
+        var gprice=10;
+        var david = 0;
+        var dprice=20;
+        var genModifier=.1;
+        var davidModifier=1;
+        var audio=1;
+    </script>
+    <div class=game style="height:100vmin;">
+        <div class=audios>
+            <audio id="audio1" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio2" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio3" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio4" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio5" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio6" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio7" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio8" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio9" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio10" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio11" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio12" style="visibility:hidden;">
+                <source src="assets/audio/oneword.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="top">
+            <p class="toptext">Chapter 1: The Lost Ball</p>
+        </div>
+        <div class="left">
+            <p id="messageBoard" class="message"> Welcome to Kozi Clicker!</p>
+            <button class="kozybutton" onclick="kozy()" onkeypress="return noenter(event)">
+                <img src="assets/img/koziarFace.png" class="koziar" id="koziar">
+            </button>
+            <p class="counter" id="counter"> Koziars: 0</p>
+            <p class="kps" id="kps">0.0 KPS</p>
+            <div id="item0" style="visibility:hidden;">
+                    <div class="shop" id="upgrades" style="visibility:inherit;">
+                        <p class="heading"> Upgrades </p>
+                        <div class="item" style="visibility:hidden;" id="item1">
+                            <button class="buyu" id="up1" onclick="upgrade(1)">BUY: 100</button>
+                            <p class="titleu">GNN News</p>
+                            <p class="descriptionu">Gen starts a new News Channel, increasing his KpS by 2x.</p>
+                        </div>
+                        <div class="item" style="visibility:hidden;" id="item2">
+                            <button class="buyu" id="up2" onclick="upgrade(2)">BUY: 1000</button>
+                            <p class="titleu">1/31 MA movie</p>
+                            <p class="descriptionu">What the hell? Why does David want this? Increases David's power by 1.5x.</p>
+                        </div>
+                        <div class="item" style="visibility:hidden;" id="item3">
+                            <button class="buyu" id="up3" onclick="upgrade(3)">BUY: 1500</button>
+                            <p class="titleu">Gen Mitosis</p>
+                            <p class="descriptionu">Gen decides that he wants to duplicate eight times.</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <br>
+            <br>
+            <div class="shop" id="shop2">
+                <button class="buy" id="buy2" onclick="buy('david')">BUY: 20</button>
+                <p class="title" id="title2"> David Liu </p>
+                <p class="description" id="desc2"> Absolutely destroys Koziar with facts and logic. Increases Kozis by 1 every click. </p>
+            </div>
+            <div class="shop" id="shop1">
+                <button class="buy" id="buy1" onclick="buy('gen')">BUY: 10</button>
+                <p class="title" id="title1"> Gen Nagamatsu </p>
+                <p class="description" id="desc1"> Automatically produces Koziars for you by making him angry. Produces 0.1 Koziar a second each.</p>
+            </div>
+        </div>
+            <br>
+            
+    </div>
+    <div id=item0 style="visibility:hidden;">  
+    <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p> This beautiful game was made by Jimbo. </p>
+        <p> matthew.hellenbrand@edgewoodhs.org -- please friend me minecraft please please </p>
+    </footer>
+    </div>
+    
+    <script>
+        say("Welcome to Kozi Clicker!");
+    </script>
+</body>
+</html>
