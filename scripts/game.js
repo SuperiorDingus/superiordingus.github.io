@@ -9,6 +9,9 @@ function begin(){
 function slowFrame(){
     setInterval(function(){
         document.getElementById("kps").innerHTML=numberFixer(((genModifier*gen)+(nuss*nussModifier)).toFixed(1))+" KPS";
+	if (gen!==0& koziars>=100){
+            buttonAppear(3);
+        }
         if (koziars>=2000){
             upgradeAppear(7);
         }
@@ -32,10 +35,6 @@ function slowFrame(){
             buttonAppear(2);
             say("Gen and David are now employable to destroy Koziar.");
         }
-        if (gen!==0& koziars>=100){
-            buttonAppear(3);
-        }
-
     }, 500)
 }
 
