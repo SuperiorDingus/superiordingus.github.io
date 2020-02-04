@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KoziarKlicker</title>
+    <title>KoziClicker</title>
     <link rel="icon" type="image/png" href="assets/img/koziarFace.png">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -10,7 +10,12 @@
 </head>
 <body onload="begin()">
     <script>
+        var SI_SYMBOL = ["", "k", "M", "B", "T", "Qt", "Qu"];
         var koziars = 0;
+        var lightmode = 0;
+        var nuss = 0;
+        var nprice= 300;
+        var nussModifier= 3;
         var unlocks = 0;
         var gen = 0;
         var gprice=10;
@@ -20,7 +25,7 @@
         var davidModifier=1;
         var audio=1;
     </script>
-    <div class=game style="height:100vmin;">
+    <div class=game style="height:100vh;">
         <div class=audios>
             <audio id="audio1" style="visibility:hidden;">
                 <source src="assets/audio/oneword.mp3" type="audio/mpeg">
@@ -58,9 +63,15 @@
             <audio id="audio12" style="visibility:hidden;">
                 <source src="assets/audio/oneword.mp3" type="audio/mpeg">
             </audio>
+            <audio id="audio13" style="visibility:hidden;">
+                <source src="assets/audio/kozidisstrack.mp3" type="audio/mpeg">
+            </audio>
         </div>
         <div class="top">
-            <p class="toptext">Chapter 1: The Lost Ball</p>
+            <!--<button class="buy" style="visibility:hidden;" id="mode" onclick="changeMode()">Light Mode</button>-->
+            <button class="invisbutton" onclick="disstrack()">
+                <p class="toptext">Chapter 1: The Lost Ball</p>
+            </button>
         </div>
         <div class="left">
             <p id="messageBoard" class="message"> Welcome to Kozi Clicker!</p>
@@ -78,16 +89,35 @@
                             <p class="descriptionu">Gen starts a new News Channel, increasing his KpS by 2x.</p>
                         </div>
                         <div class="item" style="visibility:hidden;" id="item2">
-                            <button class="buyu" id="up2" onclick="upgrade(2)">BUY: 1000</button>
+                            <button class="buyu" id="up2" onclick="upgrade(2)">BUY: 750</button>
                             <p class="titleu">1/31 MA movie</p>
-                            <p class="descriptionu">What the hell? Why does David want this? Increases David's power by 1.5x.</p>
+                            <p class="descriptionu">What the hell? Why does David want this? Increases David's power by 2x.</p>
                         </div>
                         <div class="item" style="visibility:hidden;" id="item3">
-                            <button class="buyu" id="up3" onclick="upgrade(3)">BUY: 1500</button>
-                            <p class="titleu">Gen Mitosis</p>
-                            <p class="descriptionu">Gen decides that he wants to duplicate eight times.</p>
+                            <button class="buyu" id="up3" onclick="upgrade(3)">BUY: 1.2k</button>
+                            <p class="titleu">R6 Siege</p>
+                            <p class="descriptionu">Motivates Gen to work harder, increasing his KpS by 2x.</p>
                         </div>
-                    
+                        <div class="item" style="visibility:hidden;" id="item4">
+                            <button class="buyu" id="up4" onclick="upgrade(4)">BUY: 2.5k</button>
+                            <p class="titleu">Nuss becomes Nuss</p>
+                            <p class="descriptionu">Nuss literally becomes himself, doubling his power. His KpS increases by 2x.</p>
+                        </div>
+                        <div class="item" style="visibility:hidden;" id="item6">
+                            <button class="buyu" id="up6" onclick="upgrade(6)">BUY: 1.0k</button>
+                            <p class="titleu">Koziar Power</p>
+                            <p class="descriptionu">Doubles your cash. Save it for later?</p>
+                        </div>
+                        <div class="item" style="visibility:hidden;" id="item7">
+                            <button class="buyu" id="up6" onclick="upgrade(7)">BUY: 10.0k</button>
+                            <p class="titleu">Unhealthy Anger</p>
+                            <p class="descriptionu">Gen goes out for blood. Gen's KpS increases by 5x.</p>
+                        </div>
+                        <div class="item" style="visibility:hidden;" id="item5">
+                            <button class="buyu" id="up5" onclick="upgrade(5)">BUY: 1.0k</button>
+                            <p class="titleu">Light Mode Button</p>
+                            <p class="descriptionu">A button that is designed to limit visibility. I hope your vision remains intact... sicko.</p>
+                        </div>
                 </div>
             </div>
         </div>
@@ -104,6 +134,11 @@
                 <p class="title" id="title1"> Gen Nagamatsu </p>
                 <p class="description" id="desc1"> Automatically produces Koziars for you by making him angry. Produces 0.1 Koziar a second each.</p>
             </div>
+            <div class="shop" id="shop3">
+                <button class="buy" id="buy3" onclick="buy('nuss')">BUY: 300</button>
+                <p class="title" id="title3"> Maxwell Nuss </p>
+                <p class="description" id="desc3"> Is that NUSS? Nuss nuss nuss! Produces 3 Kozis a second each. </p>
+            </div> 
         </div>
             <br>
             
